@@ -21,6 +21,12 @@ module Boilerplate
       scss filename.to_sym, :views => "#{settings.root}/assets/stylesheets"
     end
 
+    get '/assets/javascripts/*.js' do
+      content_type 'text/javascript'
+      filename = params[:splat].first
+      coffee filename.to_sym, :views => "#{settings.root}/assets/javascripts"
+    end
+
     get '/' do
       slim :home
     end

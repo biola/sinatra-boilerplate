@@ -15,7 +15,12 @@ GEM
       logging
       thor
     coderay (1.0.9)
+    coffee-script (2.2.0)
+      coffee-script-source
+      execjs
+    coffee-script-source (1.7.0)
     diff-lcs (1.2.4)
+    execjs (2.0.2)
     grit (2.5.0)
       diff-lcs (~> 1.1)
       mime-types (~> 1.15)
@@ -60,6 +65,7 @@ PLATFORMS
 
 DEPENDENCIES
   blazing
+  coffee-script
   pry
   sass
   shotgun
