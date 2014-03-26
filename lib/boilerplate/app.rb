@@ -15,6 +15,11 @@ module Boilerplate
       Slim::Engine.set_default_options :pretty => true
     end
 
+    get '/assets/stylesheets/*.css' do
+      content_type 'text/css', :charset => 'utf-8'
+      filename = params[:splat].first
+      scss filename.to_sym, :views => "#{settings.root}/assets/stylesheets"
+    end
 
     get '/' do
       slim :home

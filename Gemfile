@@ -4,6 +4,7 @@ gem 'sinatra'
 
 gem 'blazing'
 gem 'slim'
+gem 'sass'
 
 group :development do
   gem 'shotgun'

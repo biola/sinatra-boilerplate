@@ -37,6 +37,7 @@ GEM
     rack (1.5.2)
     rack-protection (1.5.1)
       rack
+    sass (3.2.14)
     shotgun (0.9)
       rack (>= 1.0)
     sinatra (1.4.4)
@@ -60,6 +61,7 @@ PLATFORMS
 DEPENDENCIES
   blazing
   pry
+  sass
   shotgun
   sinatra
   slim
