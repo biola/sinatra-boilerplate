@@ -15,7 +15,12 @@ GEM
       logging
       thor
     coderay (1.0.9)
+    coffee-script (2.2.0)
+      coffee-script-source
+      execjs
+    coffee-script-source (1.7.0)
     diff-lcs (1.2.4)
+    execjs (2.0.2)
     grit (2.5.0)
       diff-lcs (~> 1.1)
       mime-types (~> 1.15)
@@ -37,6 +42,7 @@ GEM
     rack (1.5.2)
     rack-protection (1.5.1)
       rack
+    sass (3.2.14)
     shotgun (0.9)
       rack (>= 1.0)
     sinatra (1.4.4)
@@ -59,7 +65,9 @@ PLATFORMS
 
 DEPENDENCIES
   blazing
+  coffee-script
   pry
+  sass
   shotgun
   sinatra
   slim
