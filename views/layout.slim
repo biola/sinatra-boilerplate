@@ -6,11 +6,16 @@ html lang="en-us"
     link rel="icon" type="image/png" href="https://media1.biola.edu/biola/img/biola-icon.png"
     meta name="viewport" content="width=device-width, initial-scale=1.0"
 
-    link rel="stylesheet" href==url('/assets/stylesheets/bootstrap.min.css')
-    link rel="stylesheet" href==url('/assets/stylesheets/main.css')
+    / Bootstrap stylesheets
+    link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"
+    / Application Stylesheets
+    link rel="stylesheet" href==url(asset_path('application.css'))
 
   body
     .container
       == yield
 
-    script type="text/javascript" src==url('/assets/javascripts/main.js')
+    / Latest compiled and minified JavaScript
+    / script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"
+    / Application scripts
+    script type="text/javascript" src==url(asset_path('application.js'))

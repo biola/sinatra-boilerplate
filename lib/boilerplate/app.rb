@@ -1,8 +1,15 @@
 module Boilerplate
   require 'sinatra/base'
+  require 'sinatra/asset_pipeline'
 
   class App < Sinatra::Base
     require 'slim'
+
+    # Setup asset pipeline
+    set :assets_prefix, %w(assets vendor/assets)
+    set :assets_css_compressor, :sass
+    set :assets_js_compressor, :uglifier
+    register Sinatra::AssetPipeline
 
     configure do
       set :environment, (ENV['RACK_ENV'] || :development).to_sym
@@ -13,18 +20,6 @@ module Boilerplate
       enable :logging
 
       Slim::Engine.set_default_options :pretty => true
-    end
-
-    get '/assets/stylesheets/*.css' do
-      content_type 'text/css', :charset => 'utf-8'
-      filename = params[:splat].first
-      scss filename.to_sym, :views => "#{settings.root}/assets/stylesheets"
-    end
-
-    get '/assets/javascripts/*.js' do
-      content_type 'text/javascript'
-      filename = params[:splat].first
-      coffee filename.to_sym, :views => "#{settings.root}/assets/javascripts"
     end
 
     get '/' do
